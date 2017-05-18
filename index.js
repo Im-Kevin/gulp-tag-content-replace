@@ -2,6 +2,7 @@ var through = require("through2");
 // through2 docs: https://github.com/rvagg/through2
 
 module.exports = function (search, tokenEndOrReplace, oReplace) {
+	"use strict";
 	var replace, regexString, token = '';
 	for(let c of search)
 		token += !c.match(/[a-zA-Z0-9]/) ? '\\' + c : c;
